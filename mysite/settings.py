@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
+    'wcity.apps.WcityConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,6 +79,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'polls',
+        'USER': 'king',
+        'PASSWORD': 'Queen',
+        'HOST': 'localhost',
+    },
+    'wcity': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'wcity',
         'USER': 'king',
         'PASSWORD': 'Queen',
         'HOST': 'localhost',

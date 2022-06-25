@@ -1,0 +1,7 @@
+<form action="{% url 'wcity:rent' flat.id %}" method="post">
+    {% csrf_token %}
+        <h1>{{flat.address}}</h1>
+        <div><strong>price:</strong> {{flat.price}} $</div>
+    <br/>
+    <input type="submit" value="Rent">
+</form>

@@ -1,0 +1,19 @@
+{% if flats_list %}
+            {% for flat in flats_list %}
+            <div><strong>address:</strong> {{flat.address}}</div>
+            <div>
+                {% if flat.isRent %}
+                <strong>Not rented yet</strong>
+                <div>
+                    <a href="{% url 'wcity:detail' flat.id %}">More detail</a>
+                </div>
+                {% else %}
+                <strong>Already rented</strong>
+                {% endif %}
+            </div>
+
+            <br/>
+            {% endfor %}
+{% else %}
+    <p>No flats are available.</p>
+{% endif %}
